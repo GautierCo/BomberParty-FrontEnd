@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,900;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <title>Bomber Party</title>
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="header-title"><a href="index.html">Bomber Party</a></h1>
+        <span class="title-right"></span>
+    </header>
+
+    <main>
+        <div class="main-container">
+
+            <div class="container-left" style="display: none;"></div>
+
+            <div class="container-center">
+                <span class="title-question"><!-- titre au dessus de la question --></span>
+
+                <div class="container-question">
+                    <div class="timer"><div class="timer-time">45</div></div>
+                    <div class="container-question-left">
+                        <span class="question">Quel célèbre dictateur dirigea l’URSS du milieu des années 1920 à 1953 ?</span>
+                    </div>
+                    <div class="container-question-btn">
+                        <button class="change-question"></button>
+                    </div>
+                </div>
+
+                <div class="container-game">
+                    <img src="img/arrow.png" alt="bomb party" class="bomb-img" rotate='0'>
+                </div>  
+                
+                <button class="startGame btn btn-primary">GO</button>
+                <button class="changePlayer btn btn-success">SwitchPlayer</button>
+            </div>
+
+            <div class="container-right">
+                <div class="chatbox">
+                        <h2 class="chatbox-title">Discussion</h2>
+                    <div class="chatbox-messages">
+
+                    </div>
+                    <form class="chatbox-form">
+                        <input type="text" name="" id="chatboxmsg" class="chatbox-sendmessage" placeholder="Écrivez votre message">
+                        <button type="submit" class="chatbox-btn">Chat</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="container-menu" id="container-menu" style="display: none;">
+                <h3 class="menu-title">Menu</h3>
+                <ul class="menu-list">
+                    <a href="#" class="menu-item">Profil</a>
+                    <a href="#" class="menu-item">Classement</a>
+                    <a href="#" class="menu-item">Contact</a>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                </div>
+            </div>
+        </div>
+
+        <template id="newMsg">
+            <div class="chatbox-pseudo-message">
+                <span class="chatbox-pseudo">Gut : </span><span class="chatbox-time"></span>
+                <span class="chatbox-text" id="chatbox-text">Lorem ipsum dolor sit amet.</span>
+            </div>
+        </template>
+
+        <template id="newPlayer">
+            <div id="" class="form-group">
+                <label class="pseudo"></label>
+                <input type="text" name="" class="player" id="" placeholder="Player 1" player-id="">
+            </div>
+        </template>
+
+        <script src='./node_modules/move-js/move.min.js'></script>
+        <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/3.0.0/bootstrap-native.min.js"></script>
+        <script src="js/player/timerGame.js"></script>
+        <script src="js/player/player.js"></script>
+        <script src="js/chat/chat.js"></script>
+        <script src="js/game/mainGame.js"></script>
+        <script src="js/utils.js"></script>
+        <script src="js/app.js"></script>
+
+    </main>
+    
+    <footer></footer>
+
+</body>
+</html>
