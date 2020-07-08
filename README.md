@@ -12,7 +12,7 @@ Je tiens à préciser que le code est fait au long de ma formation c'est pour ce
 
 Vous pouvez trouver le code du BackEnd (NodeJS) : 
 
-[Repo du BackEnd]()
+[Repo du BackEnd](https://github.com/GautierCo/BomberParty-BackEnd);
 
 La première version : (Avril 2020) :
 
@@ -51,7 +51,7 @@ La première version : (Avril 2020) :
 
 ___
 
-## Update sur le projet : 07.07.2020 :
+## Update : 07.07.2020 :
 
 - Ajout d'un chat avec SocketIO.
     - Fonctionnel. Besoin d'améliorations sur les vérifications lors de l'envoie de message, ajout du pseudo, etc.
@@ -62,11 +62,22 @@ ___
     - Problème pour afficher les joueurs actuels lorsqu'un nouveau joueur rejoint la partie.
     - Utilisation d'un bouton pour activer le Switch aléatoire entre chaque joueur (pour le moment pour les tests).
 
+
 ![](https://i.imgur.com/sbvBDXG.gif)
+
+## Update 08.07.2020 :
+
+- Utilisation de **grid** au lieu de **flexbox** pour placer dynamiquement chaque nouveau joueur avec une position prédéfinit dans le CSS.
+- **(socketIO)** : Ajout de nouveau joueur avec actualisation globale pour tous les joueurs. 
+- **(socketIO)** : Suppression d'un joueur lorsqu'il quitte la partie avec actualisation globale.
+- **(socketIO)** : Gestion de la rotation globale de la flèche avec actualisation.
+- Refactorisation / Organisation du code.
+
+![](https://i.imgur.com/z2rvRnC.gif)
 
 # ToDo : 
 
-- Gestion du compteur.
+- Gestion du compteur de la partie.
 - Gestion de l'état des joueurs avant de lancer le compteur. Ex: Un bouton prêt pour indiquer que l'on est prêt à lancer la partie.
 - Création / Utilisation d'une API pour récuperer les questions + la bonne réponse.
 - Vérification de la réponse en temps réelle du joueur sélectionné aléatoirement.

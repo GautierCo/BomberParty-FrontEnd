@@ -41,7 +41,8 @@ const utils = {
             e.preventDefault();
             const playerPseudo = document.querySelector('#pseudo').value;
             const playerColor = document.querySelector('#color').value;
-            chat.joinRoom(playerPseudo, playerColor);
+            websocket.joinRoom(playerPseudo, playerColor);
+            websocket.newPlayer(playerPseudo, playerColor);
             myModalInstance.hide();
         });
     },
